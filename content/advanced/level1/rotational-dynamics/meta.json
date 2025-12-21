@@ -1,0 +1,12 @@
+{
+    "title": "Rotational Dynamics",
+    "pages": [
+        "1-introduction",
+        "2-circular-motion",
+        "3-angular-acceleration",
+        "4-moment-of-inertia",
+        "5-parallel-axis-theorem",
+        "6-torque",
+        "7-angular-momentum"
+    ]
+}
