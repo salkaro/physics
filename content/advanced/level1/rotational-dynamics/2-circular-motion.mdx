@@ -1,6 +1,6 @@
 ---
 title: 2. Circular Motion
-description: -----
+description: Uniform and non-uniform motion in circular paths
 ---
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -8,57 +8,110 @@ description: -----
     src="/advanced/level1/rotational-dynamics/circular-motion.jpg"
     alt="Circular Motion"
     width={400}
-    style={{borderRadius: 5}}
+    style={{ borderRadius: 5 }}
   />
 </div>
+
+## Definitions
+#### Angular Velocity (ω)
+
+- Rate of change of angular displacement, measured in rad/s
+
+#### Centripetal Acceleration
+
+- Acceleration directed toward the center of circular motion, $a = \frac{v^2}{r}$
+
+#### Centripetal Force
+
+- Net force directed toward the center that keeps an object in circular motion, $F = \frac{mv^2}{r}$
 
 &nbsp;
 
 ## Derivations
 
-$$
-s = \Delta \theta r \\
+starting with arc length and linear displacement
 
+$$
+s = \Delta \theta r
+$$
+
+$$
 s = v \Delta t
 $$
 
+equating these expressions
+
 $$
-v \Delta t = \Delta \theta r \\
+v \Delta t = \Delta \theta r
 $$
+
+rearranging
 
 $$
 \dfrac{v}{r} = \dfrac{\Delta \theta}{\Delta t}
 $$
 
-### Angular Velocity ($w$) (rad $s^{-1}$)
-
-by definition
+by definition, angular velocity is the rate of change of angular displacement
 
 $$
-w = \dfrac{\Delta \theta}{\Delta t}
+\omega = \dfrac{\Delta \theta}{\Delta t}
 $$
 
-so
+taking the limit as $\Delta t \to 0$
 
 $$
-\lim_{\Delta t \to 0} = \dfrac{d\theta}{dt}
+\omega = \lim_{\Delta t \to 0} \dfrac{\Delta \theta}{\Delta t} = \dfrac{d\theta}{dt}
 $$
+
+therefore, the relationship between linear and angular velocity is
+
+$$
+v = \omega r
+$$
+
+&nbsp;
 
 ## Useful Equations
 
 $$
-w = \dfrac{\theta}{t}, \quad s = \theta t, \quad v = wr
+\omega = \frac{\theta}{t}, \quad s = \theta r, \quad v = \omega r
 $$
 
 $$
-a = \dfrac{v^2}{r} = w^2r
+a = \frac{v^2}{r} = \omega^2 r
 $$
 
 $$
-F = \dfrac{mv^2}{r} = mw^2r
+F = \frac{mv^2}{r} = m\omega^2 r
 $$
 
-very useful to memorise
+&nbsp;
+
+### Example 1
+
+A particle moves in a circle of radius 2 m with angular velocity 3 rad/s. What is its linear velocity?
+
+#### Answer
+
+Using $v = \omega r$
+
+$$
+v = 3 \times 2 = 6 \text{ m/s}
+$$
+
+&nbsp;
+
+### Example 2
+
+A car travels around a circular track of radius 50 m at 20 m/s. What centripetal acceleration does it experience?
+
+#### Answer
+
+Using $a = \frac{v^2}{r}$
+
+$$
+a = \frac{20^2}{50} = \frac{400}{50} = 8 \text{ m/s}^2
+$$
 
 
 &nbsp;

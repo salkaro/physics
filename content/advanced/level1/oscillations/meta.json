@@ -1,6 +1,12 @@
 {
     "title": "Oscillations",
     "pages": [
-        "introduction"
+        "1-introduction",
+        "2-simple-harmonic-motion",
+        "3-energy-in-smh",
+        "4-pendulums",
+        "5-distributed-mass-pendulum",
+        "6-damping",
+        "7-forced-oscillations"
     ]
 }

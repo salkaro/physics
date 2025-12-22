@@ -1,6 +1,20 @@
 {
     "title": "Waves",
     "pages": [
-        "introduction"
+        "1-introduction",
+        "2-mathematical-description-of-waves",
+        "3-superposition-of-waves",
+        "4-harmonic-frequencies",
+        "5-defraction",
+        "6-sound-and-accoustics",
+        "7-pressure-sound-waves",
+        "8-intensity-sound-waves",
+        "9-decibel-scale",
+        "10-standing-wave-in-a-pipe",
+        "11-doppler-effect",
+        "12-wave-properties-of-light",
+        "13-huygens-principle",
+        "14-polarisation",
+        "15-malus-law"
     ]
 }

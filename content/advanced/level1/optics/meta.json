@@ -1,6 +1,13 @@
 {
     "title": "Optics",
     "pages": [
-        "introduction"
+        "1-introduction",
+        "2-snells-law",
+        "3-total-internal-reflection",
+        "4-fibre-optics",
+        "5-geometric-optics",
+        "6-double-slit-interference",
+        "7-diffraction",
+        "8-diffraction-gratings"
     ]
 }

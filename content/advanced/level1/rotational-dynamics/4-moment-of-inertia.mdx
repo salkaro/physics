@@ -1,9 +1,12 @@
 ---
 title: 4. Moment of Inertia
-description: -----
+description: Distribution of mass around a fixed axis of rotation
 ---
 
-Moment of Inertia depends on the distribution of mass around the fixed axis of rotation
+## Definitions
+#### Moment of Inertia (I)
+
+- A measure of an object's resistance to rotational acceleration about an axis, measured in kg⋅m²
 
 $$
 I = \sum_i m_i r_i^2
@@ -11,19 +14,37 @@ $$
 
 where $r$ is the distance to the axis
 
+#### Rotational Kinetic Energy
+
+- The kinetic energy associated with rotational motion
+
+$$
+K = \dfrac{1}{2} I \omega^2
+$$
+
 &nbsp;
 
-## Kinetic Energy
+## Derivations
+
+starting with the kinetic energy of a single particle
 
 $$
 K = \dfrac{1}{2}mv^2 = \dfrac{1}{2}m\omega^2r^2
 $$
 
-we will assume $\omega$ is constant
+for a system of particles, sum over all particles (assuming $\omega$ is constant)
 
 $$
-K_{\text{total}} = \sum_{i} \dfrac{1}{2}m_i r_{i}^2 \omega_{i}^2 = \dfrac{1}{2} I \omega^2 
+K_{\text{total}} = \sum_{i} \dfrac{1}{2}m_i r_{i}^2 \omega_{i}^2
 $$
+
+factoring out $\dfrac{1}{2}\omega^2$
+
+$$
+K_{\text{total}} = \dfrac{1}{2} \omega^2 \sum_{i} m_i r_{i}^2
+$$
+
+by definition, $I = \sum_{i} m_i r_{i}^2$, therefore
 
 $$
 \boxed{K_{\text{total}} = \dfrac{1}{2} I \omega^2}
@@ -33,39 +54,79 @@ $$
 
 ## Calculating Moment of Inertia
 
-### Discrete vs Continuous
-
-For a system of **point masses**:
+for a system of point masses
 
 $$
 I = \sum_i m_i r_i^2
 $$
 
-For a **continuous body**, divide it into small elements $(dm)$:
+for a continuous body, divide it into small elements $(dm)$
 
 $$
-I = \int r^2 \, \; dm
+I = \int r^2 \, dm
 $$
 
----
-
-### 3D Bodies
-
-Express \(dm\) in terms of **density** $(\rho)$ and **volume element** $(dV)$:
+for 3D bodies, express $dm$ in terms of density $(\rho)$ and volume element $(dV)$
 
 $$
 dm = \rho \, dV
 $$
 
-then the moment of inertia becomes:
+then the moment of inertia becomes
 
 $$
-I = \int r^2 \, \; dm = \int r^2 \rho \, \; dV
+I = \int r^2 \, dm = \int r^2 \rho \, dV
 $$
 
-we choose $(dV)$ such that all points in the element are approximately the **same distance $(r)$ from the axis**.
+we choose $(dV)$ such that all points in the element are approximately the same distance $(r)$ from the axis
 
+&nbsp;
 
+## Useful Equations
+
+$$
+I = \sum_i m_i r_i^2, \quad K = \dfrac{1}{2} I \omega^2
+$$
+
+$$
+I = \int r^2 \, dm = \int r^2 \rho \, dV
+$$
+
+&nbsp;
+
+### Example 1
+
+Two point masses of 2 kg and 3 kg are located at distances of 1 m and 2 m from an axis of rotation, respectively. What is the moment of inertia of the system?
+
+#### Answer
+
+Using $I = \sum_i m_i r_i^2$
+
+$$
+I = m_1 r_1^2 + m_2 r_2^2
+$$
+
+$$
+I = 2(1)^2 + 3(2)^2 = 2 + 12 = 14 \text{ kg⋅m}^2
+$$
+
+&nbsp;
+
+### Example 2
+
+A rotating object has a moment of inertia of 5 kg⋅m² and angular velocity of 4 rad/s. What is its rotational kinetic energy?
+
+#### Answer
+
+Using $K = \dfrac{1}{2} I \omega^2$
+
+$$
+K = \dfrac{1}{2}(5)(4)^2
+$$
+
+$$
+K = \dfrac{1}{2}(5)(16) = 40 \text{ J}
+$$
 
 &nbsp;
 

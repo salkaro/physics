@@ -1,70 +1,132 @@
 ---
 title: 7. Angular Momentum
-description: -----
+description: Rotational motion and conservation of angular momentum
 ---
 
-Measure of the amount of rotational motion an object has about a particular axis
+## Definitions
+#### Angular Momentum (L)
+
+- A measure of the amount of rotational motion an object has about a particular axis, measured in kg⋅m²/s
+
+$$
+\vec{L} = \vec{r} \times \vec{p}
+$$
+
+where $\vec{r}$ is the position vector and $\vec{p}$ is the linear momentum
+
+#### Conservation of Angular Momentum
+
+- When the net external torque acting on a system is zero, the total angular momentum of the system remains constant
+
+$$
+\vec{L} = \text{constant when } \sum \vec{\tau} = 0
+$$
 
 &nbsp;
 
-## Rotating Rigid Body
+## Derivations
+
+starting with the definition of angular momentum
 
 $$
-\vec{L} = \vec{r} \times \vec{\rho}
+\vec{L} = \vec{r} \times \vec{p}
 $$
 
+for a particle with momentum $\vec{p} = m\vec{v}$ and since $\vec{v} = \omega \vec{r}$
+
 $$
-\vec{L} = \vec{r} \times (m \vec{v}) = m \times \vec{v}^2
+\vec{L} = \vec{r} \times (m \vec{v}) = m(\vec{r} \times \vec{v}) = m \vec{r}^2 \omega
 $$
 
-For a rotating rigid body, the total momentum is given by
+for a rotating rigid body, the total angular momentum is given by
 
 $$
 \vec{L} = I \omega
 $$
 
-&nbsp;
-
-## Rate of Change of Angular Momentum
-
-The rate of change of angular momentum is equal to the net torque
+taking the time derivative of angular momentum
 
 $$
-\dfrac{d\vec{L}}{dt} = \dfrac{d\vec{r}}{dt} \vec{\rho} + \vec{r}\dfrac{d\vec{\rho}}{dt}
+\dfrac{d\vec{L}}{dt} = \dfrac{d\vec{r}}{dt} \times \vec{p} + \vec{r} \times \dfrac{d\vec{p}}{dt}
 $$
 
-assuming $\vec{r}$ is constant and we know $\dfrac{d\vec{\rho}}{dt} = \vec{F}$ from linear rate of change of momentum
-
-then
+assuming $\vec{r}$ is constant (or $\dfrac{d\vec{r}}{dt}$ is parallel to $\vec{p}$), and knowing that $\dfrac{d\vec{p}}{dt} = \vec{F}$ from Newton's second law
 
 $$
 \dfrac{d\vec{L}}{dt} = \vec{r} \times \vec{F} = \vec{\tau}
 $$
 
-&nbsp;
+therefore, the rate of change of angular momentum equals the net torque
 
-## Conservation of Angular Momentum
-
-When the net external torque acting on a system is zero, the total angular momentum of the system is constant
-
-if 
+when the net external torque is zero
 
 $$
 \sum \vec{\tau} = 0
 $$
 
-then 
+then
 
 $$
 \dfrac{d\vec{L}}{dt} = 0
 $$
 
-and
+and angular momentum is conserved
 
 $$
 \vec{L} = \text{constant}
 $$
 
+&nbsp;
+
+## Useful Equations
+
+$$
+\vec{L} = \vec{r} \times \vec{p}, \quad \vec{L} = I \omega
+$$
+
+$$
+\dfrac{d\vec{L}}{dt} = \vec{\tau}
+$$
+
+&nbsp;
+
+### Example 1
+
+A point mass of 2 kg moves in a circle of radius 3 m with angular velocity 4 rad/s. What is its angular momentum?
+
+#### Answer
+
+Using $L = I\omega$ where $I = mr^2$ for a point mass
+
+$$
+L = mr^2\omega = 2(3)^2(4)
+$$
+
+$$
+L = 2(9)(4) = 72 \text{ kg⋅m}^2\text{/s}
+$$
+
+&nbsp;
+
+### Example 2
+
+A figure skater with moment of inertia 4 kg⋅m² spins at 2 rad/s. She pulls her arms in, reducing her moment of inertia to 2 kg⋅m². What is her new angular velocity?
+
+#### Answer
+
+Using conservation of angular momentum $L_i = L_f$
+
+$$
+I_1\omega_1 = I_2\omega_2
+$$
+
+$$
+4(2) = 2\omega_2
+$$
+
+$$
+\omega_2 = \frac{8}{2} = 4 \text{ rad/s}
+$$
 
 &nbsp;
 

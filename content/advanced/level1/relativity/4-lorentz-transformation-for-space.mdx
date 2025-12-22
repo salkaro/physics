@@ -1,0 +1,216 @@
+---
+title: 4. Lorentz Transformation for Space
+description: Transforming spatial coordinates between inertial reference frames
+---
+
+## Definitions
+
+#### Reference Frames
+- $S$ is the stationary reference frame with coordinates $(x, t)$
+
+- $S'$ is the moving reference frame with coordinates $(x', t')$ moving at velocity $v$ relative to $S$
+
+#### Spatial Coordinate
+- $x$ is the position in the stationary frame
+
+- $x'$ is the position in the moving frame
+
+&nbsp;
+
+## Derivations
+
+consider two inertial frames $S$ with coordinates $(x, t)$ and $S'$ with coordinates $(x', t')$
+
+assume $S'$ moves with constant velocity $v$ in the $+x$ direction relative to $S$
+
+the origins coincide at $t = t' = 0$
+
+uniform motion in one frame must remain uniform in another frame
+
+if transformations were nonlinear, straight-line worldlines could curve
+
+so we assume linear transformations
+
+$$
+x' = Ax + Bt, \quad t' = Dx + Et
+$$
+
+where $A, B, D, E$ depend only on $v$
+
+the origin of $S'$ is always at $x' = 0$
+
+in frame $S$, the origin of $S'$ moves as $x = vt$
+
+plug into the transformation
+
+$$
+0 = A(vt) + Bt = t(Av + B)
+$$
+
+so $B = -Av$, thus
+
+$$
+x' = A(x - vt)
+$$
+
+this already gives the form of the spatial Lorentz transformation
+
+Einstein's key postulate states that light travels at speed $c$ in all inertial frames
+
+a light pulse emitted from the origin satisfies $x = ct$ and $x = -ct$
+
+in $S'$, it must satisfy $x' = ct'$ and $x' = -ct'$
+
+substitute $x = ct$ into the linear transformations
+
+$$
+A(ct - vt) = c(Dct + Et)
+$$
+
+factor out $t$
+
+$$
+A(c - v) = c(Dc + E)
+$$
+
+do the same for $x = -ct$
+
+$$
+A(-c - v) = c(-Dc + E)
+$$
+
+adding the equations gives
+
+$$
+A(-2v) = 2cE \quad \Rightarrow \quad E = -\frac{Av}{c}
+$$
+
+subtracting them gives
+
+$$
+A(2c) = 2c^2D \quad \Rightarrow \quad D = \frac{A}{c}
+$$
+
+so the time transformation is
+
+$$
+t' = \frac{A}{c}x - \frac{Av}{c^2}t
+$$
+
+use symmetry: transforming back from $S'$ to $S$ must have the same form with $v \rightarrow -v$
+
+this implies
+
+$$
+A = \frac{1}{\sqrt{1 - v^2/c^2}} \equiv \gamma
+$$
+
+therefore the Lorentz transformations are
+
+$$
+x' = \gamma(x - vt), \quad t' = \gamma(t - \frac{vx}{c^2})
+$$
+
+the $x - vt$ term comes from relative motion
+
+the $\gamma$ factor comes from enforcing light-speed invariance
+
+together, they lead directly to length contraction and time dilation
+
+&nbsp;
+
+## Useful Equations
+
+$$
+\gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}, \quad x' = \gamma(x - vt), \quad x = \gamma(x' + vt')
+$$
+
+&nbsp;
+
+### Example 1
+
+A rocket is moving at $0.8c$ relative to Earth. An event occurs at $x = 1000$ m and $t = 2 \times 10^{-6}$ s in Earth's frame. What is the position of this event in the rocket's frame?
+
+#### Answer
+
+calculate the Lorentz factor
+
+$$
+\gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} = \frac{1}{\sqrt{1 - \frac{(0.8c)^2}{c^2}}} = \frac{1}{\sqrt{1 - 0.64}} = \frac{1}{\sqrt{0.36}} = \frac{1}{0.6} \approx 1.67
+$$
+
+apply the Lorentz transformation
+
+$$
+x' = \gamma(x - vt) = 1.67(1000 - 0.8 \times 3 \times 10^8 \times 2 \times 10^{-6})
+$$
+
+$$
+x' = 1.67(1000 - 480) = 1.67 \times 520 \approx 868 \text{ m}
+$$
+
+the event occurs at approximately $868$ m in the rocket's frame
+
+&nbsp;
+
+### Example 2
+
+Two events occur in a spaceship's frame at $x_1' = 0$ m and $x_2' = 500$ m, both at $t' = 0$ s. The spaceship moves at $0.6c$ relative to Earth. What is the spatial separation between these events in Earth's frame at $t = 0$ s?
+
+#### Answer
+
+calculate the Lorentz factor
+
+$$
+\gamma = \frac{1}{\sqrt{1 - 0.36}} = \frac{1}{0.8} = 1.25
+$$
+
+apply the inverse Lorentz transformation to both events
+
+$$
+x_1 = \gamma(x_1' + vt') = 1.25(0 + 0) = 0 \text{ m}
+$$
+
+$$
+x_2 = \gamma(x_2' + vt') = 1.25(500 + 0) = 625 \text{ m}
+$$
+
+the spatial separation in Earth's frame is
+
+$$
+\Delta x = x_2 - x_1 = 625 - 0 = 625 \text{ m}
+$$
+
+note that simultaneity in the spaceship's frame does not guarantee simultaneity in Earth's frame for these spatially separated events
+
+&nbsp;
+
+### Example 3
+
+A particle is created at position $x' = 0$ m in a moving frame and travels to $x' = 100$ m in time $t' = 5 \times 10^{-7}$ s. If the frame moves at $0.5c$ relative to the lab, where does the particle decay in the lab frame?
+
+#### Answer
+
+calculate the Lorentz factor
+
+$$
+\gamma = \frac{1}{\sqrt{1 - 0.25}} = \frac{1}{\sqrt{0.75}} \approx 1.15
+$$
+
+the particle decays at $x' = 100$ m and $t' = 5 \times 10^{-7}$ s in the moving frame
+
+apply the inverse transformation
+
+$$
+x = \gamma(x' + vt') = 1.15(100 + 0.5 \times 3 \times 10^8 \times 5 \times 10^{-7})
+$$
+
+$$
+x = 1.15(100 + 75) = 1.15 \times 175 \approx 201 \text{ m}
+$$
+
+the particle decays at approximately $201$ m in the lab frame
+
+&nbsp;
+
+&nbsp;

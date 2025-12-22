@@ -1,6 +1,14 @@
 {
     "title": "Mechanics 1",
     "pages": [
-        "introduction"
+        "1-introduction",
+        "2-newtons-laws",
+        "3-dot-product",
+        "4-suvat",
+        "5-cross-product",
+        "6-friction-static-and-dynamic",
+        "7-energy",
+        "8-momentum-and-impulse",
+        "9-introduction-to-general-relativity"
     ]
 }
