@@ -1,0 +1,76 @@
+---
+title: 3. LC & LCR Series Circuit
+description: -----
+---
+
+## Definitions
+
+**LC Series Circuit**
+
+- An inductor and capacitor are connected in Series
+
+- No resistance
+
+**LCR Series Circuit**
+
+- An inductor, capacitor and resistor are connected in Series
+
+**Instananeous Charge $q$**
+
+- The charge on the capacitor at any given time during the oscillation.
+
+**Phase Constant $\phi$**
+
+- Sets where in the oscillation the system starts 
+
+
+&nbsp;
+
+## Derivations
+
+### LC Series Circuit
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <img
+    src="/advanced/level1/electrical-oscillations/lc-circuit.jpg"
+    alt="LC Circuit"
+    width={400}
+    style={{ borderRadius: 5 }}
+  />
+</div>
+
+If the capacitor is charged, then put in series with the inductor
+
+$$
+\sum V = V_L + V_C = 0
+$$
+
+subbing in $V_L$ and $V_C$
+
+$$
+L\dfrac{di}{dt} + \dfrac{q}{C} = 0
+$$
+
+since $i = \dfrac{dq}{dt}$
+
+$$
+\dfrac{d^2q}{dt^2} + \dfrac{1}{LC}q = 0
+$$
+
+this takes the form of SMH so 
+
+$$
+\omega = \dfrac{1}{\sqrt{LC}}, \quad T = 2\pi \sqrt{LC}
+$$
+
+we can now form a wave equation for this
+
+$$
+q = Qcos(wt + \phi)
+$$
+
+where $Q$ is the maxium charge on the capacitor
+
+&nbsp;
+
+&nbsp;

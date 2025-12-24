@@ -1,12 +1,13 @@
 {
     "title": "Level 1",
     "pages": [
-        "mechanics-1",
+        "mechanics",
         "rotational-dynamics",
         "gravitation",
         "waves",
         "optics",
         "oscillations",
+        "electrical-oscillations",
         "relativity"
     ]
 }
